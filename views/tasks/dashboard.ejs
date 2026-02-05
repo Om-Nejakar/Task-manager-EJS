@@ -1,8 +1,14 @@
 <%- include('../partials/header') %>
 
 <main class="content">
-  <h1>This is dashboard page</h1>
-  <h1>welcome <%= user.email %></h1>
+  <div class="login">
+    <h1>Dashboard</h1>
+    <h3>Welcome <%= user.email %></h3>
+
+    <form method="POST" action="/auth/logout">
+      <button type="submit">Logout</button>
+    </form>
+  </div>
 </main>
 
 <%- include('../partials/footer') %>

@@ -14,11 +14,15 @@ router.get('/login', (req, res) => {
 
 // POST login
 router.post('/login', (req, res) => {
-  let user = req.body;
-  console.log('Login data:', user);
-  req.session.user = user;
-//   console.log(req.session)
-  res.redirect('/tasks/dashboard');
+  let {email, password} = req.body;
+
+  if(email === 'om@gmail.com' && password == '123') {
+    req.session.user = {
+      email
+    }
+    return res.redirect('/tasks/dashboard');
+  }
+  res.redirect('login');
 });
 
 // GET register page
