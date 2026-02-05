@@ -42,12 +42,4 @@ router.post('/logout', (req, res) => {
     res.redirect('/auth/login');
   });
 });
-
-router.get("/setsession", (req, res)=> {
-  req.session.test = 'session works'
-  res.send('session set')
-})
-router.get('/getsession', (req, res)=> {
-  res.send(req.session.test || 'no session');
-})
 export default router;

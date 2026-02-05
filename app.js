@@ -3,6 +3,8 @@ import authRoutes from './routes/auth.routes.js'
 import taskRoutes from './routes/task.routes.js'
 import session from 'express-session';
 
+var tasks = []
+
 const app = express()
 
 app.use(session({ 

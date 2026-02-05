@@ -5,6 +5,22 @@
     <h1>Dashboard</h1>
     <h3>Welcome <%= user.email %></h3>
 
+    <ul>
+    <% tasks.forEach(task => { %>
+      <li>
+        <%= task.title %>
+        <form method="POST" action="/tasks/<%= task.id %>/complete">
+          <button>✔</button>
+        </form>
+      </li>
+    <% }) %>
+  </ul>
+
+
+    <form method="post" action="/tasks">
+      <input name="title" type="text" placeholder="enter the task" required />
+      <button type="submit">Add Task</button>
+    </form>
     <form method="POST" action="/auth/logout">
       <button type="submit">Logout</button>
     </form>

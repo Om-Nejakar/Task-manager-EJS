@@ -80,6 +80,14 @@ input {
   font-size: 25px;
 
 }
+li {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
+}
+li form {
+    width : 20%;
+}
 
 button {
   padding: 10px;
@@ -88,6 +96,9 @@ button {
   border: none;
   cursor: pointer;
   font-size: 25px;
+  border-radius: 15px;
+  padding: 10px;
+  margin: 10px;
 }
 
 button:hover {
