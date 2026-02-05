@@ -1,5 +1,18 @@
 <%- include('../partials/header') %>
 
+<% if (success.length > 0) { %>
+  <div class="flash success">
+    <%= success[0] %>
+  </div>
+<% } %>
+
+<% if (error.length > 0) { %>
+  <div class="flash error">
+    <%= error[0] %>
+  </div>
+<% } %>
+
+
 <main class="content">
   <div class="login">
     <h1>Dashboard</h1>

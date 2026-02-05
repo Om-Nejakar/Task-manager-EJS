@@ -104,3 +104,26 @@ button {
 button:hover {
   background-color: darkgreen;
 }
+
+.flash {
+  position: fixed;
+  top: 70px;   /* adjust based on navbar height */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+
+  padding: 12px 20px;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+
+.flash.success {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.flash.error {
+  background-color: #fee2e2;
+  color: #991b1b;
+}

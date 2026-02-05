@@ -20,8 +20,10 @@ router.post('/login', (req, res) => {
     req.session.user = {
       email
     }
+    req.flash('success', 'Logged in successfully');
     return res.redirect('/tasks/dashboard');
   }
+  req.flash('error', 'Invalid email or password');
   res.redirect('login');
 });
 
@@ -42,4 +44,9 @@ router.post('/logout', (req, res) => {
     res.redirect('/auth/login');
   });
 });
+router.get('/test-flash', (req, res) => {
+  console.log(typeof req.flash);
+  res.send('check terminal');
+});
+
 export default router;
